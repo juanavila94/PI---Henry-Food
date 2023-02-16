@@ -4,9 +4,34 @@ const { DataTypes } = require('sequelize');
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('recipe', {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    image: {
+      type: DataTypes.BLOB('long'),
+      allowNull: false,
+    },
+    dishResume: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    healthScore: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    stepByStep: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
+      
+  },
+  {
+    timestamps : false
   });
 };
