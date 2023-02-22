@@ -5,9 +5,9 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('recipe', {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
       primaryKey: true,
-      autoIncrement: true
+      defaultValue:DataTypes.UUIDV4
     },
     name: {
       type: DataTypes.STRING,
@@ -18,7 +18,7 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     dishResume: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     healthScore: {
