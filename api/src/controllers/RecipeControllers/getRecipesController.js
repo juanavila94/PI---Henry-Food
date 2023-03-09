@@ -13,7 +13,7 @@ const {
           return {
                id : e.id,
                name : e.title,
-               Image : e.image,
+               image : e.image,
                dishResume: e.summary,
                healthScore : e.healthScore,
                stepByStep : e.analyzedInstructions[0]?.steps.map((e) => e.step),

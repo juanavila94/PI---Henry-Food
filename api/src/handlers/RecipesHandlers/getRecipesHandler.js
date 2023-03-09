@@ -12,7 +12,7 @@ const getRecipesHandler = async (req, res) => {
                res.status(200).json(recipe);
           }else {
                const recipes = await getRecipes();
-               res.status(400).json(recipes);
+               res.status(200).json(recipes);
           }
      } catch (error) {
           res.status(400).json({ error: error.message});
