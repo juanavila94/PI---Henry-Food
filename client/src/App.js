@@ -1,4 +1,4 @@
-
+import "./App.css"
 import { Route } from 'react-router-dom';
 import { Detail, Form, Landing, Home} from './views/views';
 

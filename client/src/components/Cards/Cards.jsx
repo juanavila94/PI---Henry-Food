@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import style from './Cards.module.css'
 
 const Cards = (props) => {
   return (
-    <div>
+    <div className={style.container}>
        <Link to={`/recipes/:${props.id}`}>
-           </Link>
           <p>name:{props.name}</p>
-      <p>image:{props.image}</p>
-      <p>diets:{props.diets}</p>
+        </Link>
+        <img src={props.image} alt="dietpic" />
+        <p>diets:{props.diets}</p>
   </div>
   )
 }

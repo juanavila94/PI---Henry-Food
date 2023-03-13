@@ -2,7 +2,7 @@ import React from 'react'
 
 const Carrousel = () => {
   return (
-    <div>Carrousel</div>
+    <div>Carrousels</div>
   )
 }
 
